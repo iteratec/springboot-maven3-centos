@@ -1,4 +1,4 @@
-IMAGE_NAME = codecentric/springboot-maven3-centos
+IMAGE_NAME = iteratec/springboot-maven3-centos
 
 build:
 	docker build -t $(IMAGE_NAME) .
@@ -7,4 +7,3 @@ build:
 test:
 	docker build -t $(IMAGE_NAME)-candidate .
 	IMAGE_NAME=$(IMAGE_NAME)-candidate test/run test-app
-	IMAGE_NAME=$(IMAGE_NAME)-candidate test/run test-app-mvnw

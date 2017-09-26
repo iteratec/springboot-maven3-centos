@@ -7,7 +7,7 @@ FROM openshift/base-centos7
 
 EXPOSE 8080
 
-ENV JAVA_VERSON 1.8.0
+ENV JAVA_VERSION 1.8.0
 ENV MAVEN_VERSION 3.3.9
 
 LABEL io.k8s.description="Platform for building and running Spring Boot applications" \
@@ -17,7 +17,7 @@ LABEL io.k8s.description="Platform for building and running Spring Boot applicat
 
 RUN yum update -y && \
   yum install -y curl && \
-  yum install -y java-$JAVA_VERSON-openjdk java-$JAVA_VERSON-openjdk-devel && \
+  yum install -y java-$JAVA_VERSION-openjdk java-$JAVA_VERSION-openjdk-devel && \
   yum clean all
 
 RUN curl -fsSL https://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz | tar xzf - -C /usr/share \

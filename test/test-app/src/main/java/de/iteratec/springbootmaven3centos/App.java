@@ -1,4 +1,4 @@
-package de.codecentric.springbootmaven3centos;
+package de.iteratec.springbootmaven3centos;
 
 import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.*;
